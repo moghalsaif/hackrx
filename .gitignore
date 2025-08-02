@@ -1,0 +1,140 @@
+# RAGFlow Project .gitignore
+
+# Environment and Configuration
+.env
+.env.local
+.env.production
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+ragflow-env/
+dev-env/
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Vector Database and Generated Data
+vector_db/
+data/embeddings_backup.pkl
+data/document_chunks_backup.json
+logs/*.log
+logs/interactions_*.json
+
+# Local Models and Large Files
+models/
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.gguf
+*.ggml
+
+# Temporary Files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Streamlit
+.streamlit/
+
+# Local test files
+test_*.py.bak
+*_test_backup.*
+
+# Documentation builds
+docs/_build/
+
+# OS generated files
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# node_modules (if any JS tools are used)
+node_modules/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Large data files (keep the sample PDF for demo)
+# Uncomment if you want to exclude the sample PDF:
+# *.pdf
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+*.7z 

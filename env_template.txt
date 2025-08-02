@@ -1,0 +1,85 @@
+# RAGFlow Insurance Policy System - Environment Configuration
+# Copy this file to .env and fill in your API keys
+
+# ===================================
+# LLM API Configuration
+# ===================================
+# Choose ONE of the following LLM providers
+
+# Option 1: OpenAI (Cloud)
+# OPENAI_API_KEY=your_openai_api_key_here
+
+# Option 2: Anthropic (Cloud)
+# ANTHROPIC_API_KEY=your_anthropic_api_key_here
+
+# Option 3: Local Llama 3 (Recommended)
+LLM_PROVIDER=local
+LLM_MODEL=llama3
+LLM_TEMPERATURE=0.1
+MAX_TOKENS=1000
+
+# ===================================
+# Local Model Configuration (Llama 3)
+# ===================================
+
+# Model Type: transformers, ollama, or llamacpp
+LOCAL_MODEL_TYPE=ollama
+
+# For Transformers setup
+# LOCAL_MODEL_PATH=models/llama3
+# LOCAL_MODEL_DEVICE=auto
+# LOCAL_MODEL_PRECISION=fp16
+# USE_GPU=true
+# MAX_MEMORY_GB=8
+
+# For Ollama setup (Recommended)
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL_NAME=llama3
+
+# For llama.cpp setup
+# LOCAL_MODEL_PATH=models/llama3/model.gguf
+
+# ===================================
+# Optional Configuration Overrides
+# ===================================
+
+# Document Processing
+# CHUNK_SIZE=512
+# CHUNK_OVERLAP=50
+# MIN_CHUNK_SIZE=100
+
+# Embedding Model
+# EMBEDDING_MODEL=all-mpnet-base-v2
+
+# Retrieval Configuration
+# TOP_K_RETRIEVAL=5
+# SIMILARITY_THRESHOLD=0.7
+
+# System Configuration
+# LOG_LEVEL=INFO
+# ENABLE_AUDIT_LOGGING=true
+# ENABLE_QUERY_EXPANSION=true
+
+# ===================================
+# Setup Instructions
+# ===================================
+# 
+# QUICK START WITH LLAMA 3:
+# 1. Copy this file to .env in the same directory
+# 2. Run: python setup_llama3.py
+# 3. Follow the interactive setup wizard
+# 4. Test with: python run_demo.py
+#
+# MANUAL SETUP:
+# 1. Install Ollama: https://ollama.ai/download
+# 2. Run: ollama pull llama3
+# 3. Copy this file to .env
+# 4. Uncomment the Llama 3 configuration above
+# 5. Run: python ragflow_system.py
+#
+# CLOUD PROVIDERS (Alternative):
+# 1. Get API key from OpenAI or Anthropic
+# 2. Uncomment the respective provider section above
+# 3. Set LLM_PROVIDER=openai or LLM_PROVIDER=anthropic
+#
+# Note: The .env file should never be committed to version control 
